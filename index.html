@@ -20,6 +20,11 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css\style.css">
+     <!-- Link Swiper's CSS -->
+     <link
+     rel="stylesheet"
+     href="https://unpkg.com/swiper/swiper-bundle.min.css"
+   />
 </head>
 <body data>
     <header>
@@ -55,6 +60,7 @@
     </header>
 
     <section class="ss_bg_full main_header_bg">
+        
         <div class="spacer"></div>
         <div class="container-fluid">
             <div class="row">
@@ -65,13 +71,21 @@
                     <a href="#contactUs" class="ss_btn ss_btn_trans ss_btn_md ss_btn_rounded text-center">Get In Touch</a>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-center">
-                    <img src="./img/sushant sharma Resume.jpg" alt="">
-                    </div>
-                </div>
-            </div>
+                
         </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./img/sushant sharma Resume.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="./img\/bg.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="./img/bg.jpg" alt=""></div>
+              
+              
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+          </div>
+    </div>
     </section>
 <!-- Educational Qualification -->
     <section class="ss_bg_md_full edu_qua_sec">
@@ -719,6 +733,21 @@
 
 
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+      
+    
     <script src="js/animate.js"></script>
     <script src="js/color.js"></script>
     <script data-cfasync="false" type="text/javascript" src="js/form.js"></script>

@@ -51,7 +51,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: var(--ss-text-md);
-    color: #ffffff;
+    color: #000000;
     font-weight: 300;
     line-height: 25px;
     width: 100%;
@@ -490,6 +490,55 @@ a {
     font-size: 30px;
     cursor: pointer;
 }
+.swiper {
+    width: 50%;
+    height: 10%;
+    float: right;
+    top: 20%;
+  }
+  .swiper:hover{
+      box-shadow: #1AA179;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 10px;
+    background: rgb(0, 0, 0);
+    transition: all 0.4s ease-in-out;
+
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+.swiper-slide img {
+    display: block;
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    
+    
+  }
+
+    
+
+
+.swiper:hover {
+    background-color: #0D6EFD;
+    
+
+}
+
 
 .openbtn:hover {
     color: var(--ss-main-300);
@@ -522,9 +571,12 @@ a {
     .sidenav a {
         font-size: 18px;
     }
+    
+    
 }
 
 @media (min-width: 768px) {
+    
     .sidenav {
         height: 3rem;
         padding-top: 0;
@@ -543,6 +595,13 @@ a {
     .sidenav a {
         display: inline-block;
     }
+    .swiper {
+        width: 50%;
+        height: 10%;
+        justify-content: center;
+        align-items: center;
+        top: 20%;
+      }
 }
 
 
