@@ -1,56 +1,116 @@
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
 
-const circleProgress1 = document.getElementsByClassName("ss_circle_progress")[0];
-const circleProgress2 = document.getElementsByClassName("ss_circle_progress")[1];
-const circleProgress3 = document.getElementsByClassName("ss_circle_progress")[2];
-const circleProgress4 = document.getElementsByClassName("ss_circle_progress")[3];
-const circleProgress5 = document.getElementsByClassName("ss_circle_progress")[4];
-const circleProgress6 = document.getElementsByClassName("ss_circle_progress")[5];
-const circleProgress7 = document.getElementsByClassName("ss_circle_progress")[6];
-
-const shivPath = document.getElementsByClassName("shiv_animation_start")[0];
-
-document.addEventListener('scroll', function() {
-    for (let i = 0; i < 12; i++) {
-        if (isInViewport(document.getElementsByClassName("progress-bar")[i])) {
-            document.getElementsByClassName("progress-bar")[i].classList.add("ss_progress_width");
+particlesJS("partical-js", {
+    "particles": {
+      "number": {
+        "value": 380,
+        "density": {
+          "enable": true,
+          "value_area": 800
         }
-    }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
+  
+  
 
-    if (isInViewport(circleProgress1)) {
-        document.getElementsByClassName("ss_stroke_50")[0].classList.add("ss_s_50");
-    }
-    if (isInViewport(circleProgress2)) {
-        document.getElementsByClassName("ss_stroke_50")[1].classList.add("ss_s_90");
-    }
-    if (isInViewport(circleProgress3)) {
-        document.getElementsByClassName("ss_stroke_50")[2].classList.add("ss_s_40");
-    }
-    if (isInViewport(circleProgress4)) {
-        document.getElementsByClassName("ss_stroke_50")[3].classList.add("ss_s_50");
-    }
-    if (isInViewport(circleProgress5)) {
-        document.getElementsByClassName("ss_stroke_50")[4].classList.add("ss_s_90");
-    }
-    if (isInViewport(circleProgress6)) {
-        document.getElementsByClassName("ss_stroke_50")[5].classList.add("ss_s_50");
-    }
-    if (isInViewport(circleProgress7)) {
-        document.getElementsByClassName("ss_stroke_50")[6].classList.add("ss_s_10");
-    }
-    // if(isInViewport(shivPath)){
-    //     document.getElementsByClassName("shiv_svg_animation")[0].classList.add("shiv_svg_path");
-    //     document.getElementsByClassName("shiv_svg_animation")[1].classList.add("shiv_svg_path");
-    // }
-
-}, {
-    passive: true
-});
+  
+  
