@@ -20,7 +20,7 @@
 .tinderCards__cardContainer {
     display: flex;
     justify-content: right;
-    margin-top: 5vh;
+    margin-top: 0.5vh;
     padding-right: 7rem;
     padding-top: 4rem;
     padding-left: 10rem;

@@ -1,10 +1,17 @@
 import React from 'react';
 import SusPhoto from "./SusPhoto"
+import Background from "../Components/Background"
+import "./Home.css"
+
+
 
 const Home = () => {
   return (
-    <div>
+    
+    <div className='bg-home'>
       <SusPhoto/>
+      <Background/>
+      
     </div>
   )
 }
