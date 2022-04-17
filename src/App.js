@@ -15,37 +15,16 @@ import Background from "./Components/Background"
  
 const App = () => {
   return (
-    
-    <Router>
-      
+    <div className="di">
+      <Background/>
       <Navbar/>
-      <main>
+      <Home/>
       
-        
-       <Switch>
-       <Route path="/" exact>
-          <Home/>
-          <Background/>
-          </Route>
-        <Route path="/About" exact>
-          <About/>
-          <Background/>
-          </Route>
-        <Route path="/Contact" exact>
-          <Contact/>
-          <Background/>
-        </Route>
-        <Route path="/Project" exact>
-          <Project/>
-          <Background/>
-        </Route>
-
-        <Redirect to="/"/>
-        </Switch>
-        
-        
-      </main>
-    </Router>
+    </div>
+    
+    
+      
+      
   )
 }
 

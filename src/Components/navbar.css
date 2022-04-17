@@ -1,35 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background: #fff;
 }
-*{
+
+* {
+    z-index: 10000;
     margin: 0;
     padding: 0;
-
 }
-.Navlink-navbar{
-    
+
+.Navlink-navbar {
     background-color: #000;
     justify-content: center;
     height: 60px;
     align-items: center;
     font-size: 1rem;
     display: flex;
-    
 }
-.nav-logo{
+
+.nav-logo {
     justify-self: start;
     font-size: medium;
     padding: 2rem;
     color: #fff;
-
 }
 
-.nav-menu{
+.nav-menu {
     display: grid;
-    grid-template-columns: repeat(4,auto);
+    grid-template-columns: repeat(4, auto);
     grid-gap: 40px;
     list-style: none;
     text-align: top;
@@ -37,35 +36,37 @@ body{
     justify-content: end;
     margin-right: 2rem;
     text-decoration: none;
-    
     color: #fff;
-    }
-.fa-bars{
-    color:white;
-    
 }
-.nav-links{
-    text-decoration: none;
+
+.fa-bars {
     color: white;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
     padding: 1rem 1rem;
 }
-.menuIcon{
+
+.nav-links:hover {
+    color: skyblue;
+    font-weight: bold;
+}
+
+.menuIcon {
     display: none;
 }
-.fa-times{
+
+.fa-times {
     color: white;
 }
 
-
-    
-
-
-@media screen and (max-width:760px){
-    .Navlink-navbar{
+@media screen and (max-width:760px) {
+    .Navlink-navbar {
         position: relative;
-        
     }
-    .nav-menu{
+    .nav-menu {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -74,45 +75,39 @@ body{
         top: 3.75rem;
         left: -100%;
         opacity: 1;
-        transition:all 0.5s ease;
+        transition: all 0.5s ease;
+        z-index: 199;
     }
-    .nav-menu.active{
-        
-        background: #000;
+    .nav-menu.active {
+        background: rgb(0, 0, 0);
         left: 0;
         opacity: 1;
-        
-        
-        transition:all 0.5s ease;
-        z-index: 99;
-        
-
+        transition: all 0.5s ease;
+        z-index: 199;
     }
-    .nav-links{
+    .nav-links {
         text-align: center;
         width: 100%;
         display: table;
         padding: 1rem;
+        z-index: 199;
     }
-    .nav-logo{
+    .nav-logo {
         justify-self: start;
         font-size: medium;
         padding: 1rem;
         color: #fff;
         transition: all 0.5s ease;
-    
+        z-index: 199;
     }
-    .menuIcon{
+    .menuIcon {
         display: block;
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-100%,60%);
+        transform: translate(-100%, 60%);
         font-size: 1rem;
+        z-index: 199;
         cursor: pointer;
     }
-
 }
-
-    
-
