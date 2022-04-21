@@ -22,7 +22,7 @@ const Background = () => {
                 interactivity: {
                     events: {
                         onClick: {
-                            enable: false,
+                            enable: true,
                             mode: "push",
                         },
                         onHover: {
@@ -77,10 +77,10 @@ const Background = () => {
                         value: 80,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 1,
                     },
                     shape: {
-                        type: "edge",
+                        type: "triangle",
                     },
                     size: {
                         random: false,
