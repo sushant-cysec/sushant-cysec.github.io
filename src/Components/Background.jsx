@@ -80,7 +80,7 @@ const Background = () => {
                         value: 1,
                     },
                     shape: {
-                        type: "triangle",
+                        type: "circle",
                     },
                     size: {
                         random: false,
