@@ -14,10 +14,10 @@ class Navbar extends Component  {
   render(){
   return (
    <nav className='Navlink-navbar'>
-     <h1 className="nav-logo">MY portfolio</h1>
+     <h1 className="nav-logo" to="/" draggable="false">MY portfolio</h1>
        
      
-     <div className='menuIcon' onClick={this.handleclick}>
+     <div className='menuIcon' onClick={this.handleclick} draggable="false">
        <i className={this.state.clicked ? "fas fa-times":"fas fa-bars"}></i>
      </div>
      <ul className={this.state.clicked ?"nav-menu active":"nav-menu"}>

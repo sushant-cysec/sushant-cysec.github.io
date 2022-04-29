@@ -18,15 +18,15 @@ const Background = () => {
             {
 
 
-                fpsLimit: 200,
+                fpsLimit: 300,
                 interactivity: {
                     events: {
                         onClick: {
-                            enable: true,
+                            enable: false,
                             mode: "push",
                         },
                         onHover: {
-                            enable: true,
+                            enable: false,
                             mode: "repulse",
                         },
                         resize: true,
@@ -52,10 +52,10 @@ const Background = () => {
                         value: "#ffffff",
                     },
                     links: {
-                        color: "#000",
+                        color: "#fff",
                         distance: 10,
                         enable: true,
-                        opacity: 0.5,
+                        opacity: 1,
                         width: 1,
                     },
                     collisions: {
@@ -77,7 +77,7 @@ const Background = () => {
                         value: 80,
                     },
                     opacity: {
-                        value: 1,
+                        value: 0.4,
                     },
                     shape: {
                         type: "circle",

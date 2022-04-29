@@ -1,5 +1,15 @@
 body {
     font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: casual;
+    src: url(../assets/Casual/casual.ttf);
 }
 
 * {
@@ -10,7 +20,7 @@ body {
 .bg-home {
     background-color: rgb(0, 0, 0);
     display: flex;
-    height: 77vh;
+    height: 90vh;
     align-items: center;
     justify-content: center;
 }
@@ -26,17 +36,175 @@ body {
 .home-text>:nth-child(1) {
     color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 3rem
+    font-size: 3rem;
+    user-select: none;
 }
 
-.home-text>:nth-child(2)>img {
-    height: 16vw;
-    z-index: inherit;
+.home-text>:nth-child(2) {
+    font-family: casual;
+    font-weight: 4px;
+    font-size: 4vw;
+    user-select: none;
+    text-shadow: tomato;
+    color: rgb(93, 192, 231);
 }
 
 .home-text>:nth-child(3) {
+    font-family: casual;
+    color: orangered;
+}
+
+.home-text>:nth-child(4) {
     color: white;
-    display: flex;
-    font-size: 2vh;
+    font-size: 1vw;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-right: 2rem;
+}
+
+.home-text>:nth-child(5) {
+    color: orangered;
+    background-color: rgb(93, 192, 231);
+    border-radius: 1rem;
     font-weight: bold;
+    padding: 0.5rem;
+    margin: 2rem;
+}
+
+.home-text>:nth-child(5):hover {
+    color: rgb(93, 192, 231);
+    background-color: orangered;
+}
+
+.home-about {
+    justify-content: center;
+    background: rgb(0, 0, 0);
+    height: 97vh;
+}
+
+.center-part>:nth-child(1) {
+    font-family: casual;
+    color: rgb(93, 192, 231);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 3vw;
+    z-index: inherit;
+}
+
+.contains {
+    margin: 1vw;
+    display: flex;
+    align-items: center;
+}
+
+.left-part>:nth-child(1) {
+    user-select: none;
+    color: white;
+    align-items: left;
+    margin-right: 50%;
+    margin-top: 2rem;
+    margin-left: 8rem;
+    opacity: 0.7;
+    justify-content: left;
+}
+
+.right-part {
+    margin-bottom: 47vh;
+    justify-content: right;
+}
+
+@media screen and (max-width:760px) {
+    .bg-home {
+        height: 92vh;
+    }
+    .home-text>:nth-child(1) {
+        color: red;
+        font-size: 5vw;
+    }
+    .home-text>:nth-child(2) {
+        font-size: 4vw;
+        transition: all ease-in-out;
+    }
+    .home-text>:nth-child(3) {
+        font-size: 3vw;
+        align-items: center;
+        justify-content: center;
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
+    .home-text>:nth-child(4) {
+        font-size: 3vw;
+        align-items: center;
+        justify-content: center;
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
+    .left-part {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-part>:nth-child(2) {
+        display: block;
+    }
+    .left-part>:nth-child(1)>img {
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .bg-home {
+        height: 92vh;
+    }
+    .home-text>:nth-child(1) {
+        color: rgb(255, 255, 255);
+        font-size: 8vw;
+    }
+    .home-text>:nth-child(2) {
+        font-size: 7vw;
+        transition: all ease-in-out;
+    }
+    .home-text>:nth-child(4) {
+        font-size: 3vw;
+        align-items: center;
+        justify-content: center;
+        padding-left: 3rem;
+        padding-right: 2rem;
+    }
+    .home-text>:nth-child(5) {
+        margin: 5rem;
+    }
+    .left-part {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-part>:nth-child(2) {
+        display: block;
+    }
+    .left-part>:nth-child(1)>img {
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+}
+
+@media screen and ( min-width:361px) and (max-width:760px) {
+    .bg-home {
+        height: 90vh;
+    }
+    .home-text>:nth-child(1) {
+        color: rgb(255, 255, 255);
+        font-size: 8vw;
+    }
+    .home-text>:nth-child(2) {
+        font-size: 7vw;
+        transition: all ease-in-out;
+    }
 }
